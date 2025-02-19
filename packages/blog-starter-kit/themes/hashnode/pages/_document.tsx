@@ -16,7 +16,7 @@ declare global {
 
 export default function Document() {
 	return (
-		<Html lang="en">
+		<Html lang="en" amp="">
 			<Head>
 				{/* Google AdSense Meta Tag */}
 				<meta name="google-adsense-account" content="ca-pub-4236044300590126" />
