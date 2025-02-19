@@ -94,6 +94,14 @@ function PublicationSocialLinks(props: Props) {
                 </PublicationSocialLinkItem>
               );
             })}
+          <PublicationSocialLinkItem
+            key="rss"
+            href="rss.xml"
+            labelText="Open blog XML Feed, opens in new tab"
+            isSidebar={!!isSidebar}
+          >
+            <RssSVG className="h-5 w-5 fill-current" />
+          </PublicationSocialLinkItem>
         </div>
       ) : null}
     </>
