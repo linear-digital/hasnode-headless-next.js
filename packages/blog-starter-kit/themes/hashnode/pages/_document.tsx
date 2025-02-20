@@ -33,6 +33,7 @@ export default function Document() {
 					custom-element="amp-auto-ads"
 					src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"
 				></script>
+				
 			</Head>
 			<body>
 				{/* AMP Auto Ads */}
