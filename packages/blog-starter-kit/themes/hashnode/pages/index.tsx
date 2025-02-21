@@ -22,6 +22,7 @@ import { createHeaders, createSSRExchange, getUrqlClientConfig } from '../lib/ap
 
 import FeaturedPosts from '../components/features-posts';
 
+import FeaturedPost from '../components/PostCard';
 import PublicationFooter from '../components/publication-footer';
 import PublicationMeta from '../components/publication-meta';
 import { resizeImage } from '../utils/image';
@@ -130,6 +131,7 @@ export default function Index(
 				</Head>
 				<Header isHome={true} />
 				<div>
+					<FeaturedPost post={postsToBeRendered.edges.map((p: any) => p.node)[0]} />
 					{postsToBeRendered.edges.length > 0 ? (
 						<FeaturedPosts
 							posts={postsToBeRendered.edges.map((p: any) => p.node).slice(0, 3)}
@@ -138,9 +140,7 @@ export default function Index(
 					) : null}
 
 					{publication.about?.html ? (
-						<div
-							className="blog-author-container border-b dark:border-slate-800"
-						>
+						<div className="blog-author-container border-b dark:border-slate-800">
 							<div
 								className={twJoin(
 									'blog-author-area feed-width mx-auto md:w-3/4 lg:w-2/3',
